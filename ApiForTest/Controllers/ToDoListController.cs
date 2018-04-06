@@ -42,6 +42,15 @@ namespace ApiForTest.Controllers
             }
             return Ok();
         }
+        
+        public IHttpActionResult Delete(int id)
+        {
+            var ctx = new mydbformobileEntities();
+            var existingTask = ctx.TodoList.Where(s => s.Id == id).FirstOrDefault<TodoList>();
+            ctx.TodoList.Remove(existingTask);
+            ctx.SaveChanges();
+            return Ok();
+        }
 
     }
 }
