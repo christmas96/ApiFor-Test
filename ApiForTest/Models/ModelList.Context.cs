@@ -13,10 +13,10 @@ namespace ApiForTest.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class mydbformobileEntities : DbContext
+    public partial class mydbformobileEntitiesList : DbContext
     {
-        public mydbformobileEntities()
-            : base("name=mydbformobileEntities")
+        public mydbformobileEntitiesList()
+            : base("name=mydbformobileEntitiesList")
         {
         }
     
